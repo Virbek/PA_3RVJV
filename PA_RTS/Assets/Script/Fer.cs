@@ -8,13 +8,16 @@ public class Fer : MonoBehaviour
     public GameObject player;
     
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("human"))
-        {
-            player.GetComponent<Player>().recuperFer();
-        }
+        Console.Write("Collision");
+        Debug.Log("Collision");
+        player.GetComponent<Player>().RecupererFer(collision.gameObject);
+        
     }
 
-    
+    private void OnTriggerStay(Collider other)
+    {
+        player.GetComponent<Player>().RecupererFer(other.gameObject);
+    }
 }

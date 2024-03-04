@@ -15,7 +15,6 @@ public class Deplacement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector3 positionClic ;
         if (_selected)
         {
             if (Input.GetMouseButtonDown(1))
@@ -25,7 +24,7 @@ public class Deplacement : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     var objToucher = hit.collider.gameObject;
-                    if (objToucher.CompareTag("sol"))
+                    if (objToucher.CompareTag("sol") || objToucher.CompareTag("fer"))
                     {
                         _positionClic = hit.point;
                         _move = true;
@@ -40,6 +39,7 @@ public class Deplacement : MonoBehaviour
 
         if (_move)
         {
+            
             MoveToPosition(_positionClic);
             if (transform.position == _positionClic)
             {
@@ -51,6 +51,12 @@ public class Deplacement : MonoBehaviour
     public void SelectedTrue()
     {
         _selected = true;
+    }
+    
+    public void SelectedFalse()
+    {
+        _selected = false;
+        _move = false;
     }
     
     private void MoveToPosition(Vector3 targetPosition)
