@@ -23,18 +23,21 @@ public class Recolte : MonoBehaviour
     {
         _appeller = true;
         _tempsEcouler += Time.deltaTime;
-        Debug.Log(_tempsEcouler);
         if (_tempsEcouler >= _fin && !_recolter)
         {
             _recolter = true;
             _appeller = false;
-            Debug.Log("c'est bon");
-            _tempsEcouler = 0;
+            _tempsEcouler = 0f;
         }
     }
 
     public bool GetRecolte()
     {
         return _recolter;
+    }
+
+    public void SetRecolte(bool recolte)
+    {
+        _recolter = recolte;
     }
 }

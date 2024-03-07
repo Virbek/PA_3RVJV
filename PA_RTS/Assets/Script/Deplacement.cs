@@ -24,9 +24,13 @@ public class Deplacement : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     var objToucher = hit.collider.gameObject;
-                    if (objToucher.CompareTag("sol") || objToucher.CompareTag("fer"))
+                    if (objToucher.CompareTag("sol"))
                     {
                         _positionClic = hit.point;
+                        _move = true;
+                    }else if (objToucher.CompareTag("fer"))
+                    {
+                        _positionClic = objToucher.transform.position;
                         _move = true;
                     }
                 }
@@ -39,10 +43,11 @@ public class Deplacement : MonoBehaviour
 
         if (_move)
         {
-            
+            float tolerance = 0.5f;
             MoveToPosition(_positionClic);
-            if (transform.position == _positionClic)
+            if (Vector3.Distance(transform.position, _positionClic) < tolerance)
             {
+                Debug.Log("je m'arrete");
                 _move = false;
             }
         }

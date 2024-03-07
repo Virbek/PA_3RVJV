@@ -10,8 +10,6 @@ public class Fer : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Console.Write("Collision");
-        Debug.Log("Collision");
         player.GetComponent<Player>().RecupererFer(collision.gameObject);
         
     }

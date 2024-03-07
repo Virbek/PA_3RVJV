@@ -8,6 +8,7 @@ TagManager:
   - fer
   - robot
   - human
+  - Usine
   layers:
   - Default
   - TransparentFX

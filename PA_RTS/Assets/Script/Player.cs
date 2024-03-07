@@ -45,8 +45,25 @@ public class Player : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                _objSelect.Add(hit.collider.gameObject);
-                PerformSelection();
+                var objToucher = hit.collider.gameObject;
+                if (objToucher.CompareTag("Usine"))
+                {
+                    if (_fer > 200)
+                    {
+                        objToucher.GetComponent<Spawner>().Cooldown();
+                        _fer -= 200;
+                    }
+                    else
+                    {
+                        Debug.Log("pas assez de fer");
+                    }
+                }
+                else
+                {
+                    _objSelect.Add(objToucher);
+                    PerformSelection(); 
+                }
+                
             }
         }
         
@@ -66,33 +83,32 @@ public class Player : MonoBehaviour
             mainCamera.transform.eulerAngles = new Vector3(mainCamera.transform.eulerAngles.x,
                 mainCamera.transform.eulerAngles.y, 0.0f);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
     
     void PerformSelection()
     {
         foreach (GameObject obj in _objSelect)
         {
-            
-            var deplacementComponent = obj.GetComponent<Deplacement>();
-
-            if (deplacementComponent)
+            if (obj.transform.parent != null)
             {
-                deplacementComponent.SelectedTrue();
+                obj.transform.parent.GetComponent<Deplacement>().SelectedTrue();
             }
+            else
+            {
+                obj.GetComponent<Deplacement>().SelectedTrue(); 
+            }
+            
         }
     }
 
     public void RecupererFer(GameObject recolteur)
     {
-        if (human.Count != 0)
-        {
-            _humanRecolte.Add(recolteur);
-            human.Remove(recolteur);
-            recolteur.GetComponent<Renderer>().enabled = false;
-            recolteur.GetComponent<Deplacement>().SelectedFalse();
-            recolteur.GetComponent<Recolte>().OnRecolt();
-        }
 
         if (recolteur.GetComponent<Recolte>().GetRecolte())
         {
@@ -101,7 +117,19 @@ public class Player : MonoBehaviour
             human.Add(recolteur);
             _humanRecolte.Remove(recolteur);
             recolteur.GetComponent<Renderer>().enabled = true;
-            recolteur.transform.Translate(-transform.forward * 2f);
+            recolteur.GetComponent<Recolte>().SetRecolte(false);
+            recolteur.transform.Translate(-transform.forward * 3f);
+        }
+        else
+        {
+            if (human.Count != 0)
+            {
+                _humanRecolte.Add(recolteur);
+                human.Remove(recolteur);
+                recolteur.GetComponent<Renderer>().enabled = false;
+                recolteur.GetComponent<Deplacement>().SelectedFalse();
+                recolteur.GetComponent<Recolte>().OnRecolt();
+            }
         }
     }
 
