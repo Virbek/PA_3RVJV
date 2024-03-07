@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - sol
+  - fer
+  - robot
+  - human
+  - Usine
   layers:
   - Default
   - TransparentFX

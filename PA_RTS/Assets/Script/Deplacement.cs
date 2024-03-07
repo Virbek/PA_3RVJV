@@ -15,7 +15,6 @@ public class Deplacement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector3 positionClic ;
         if (_selected)
         {
             if (Input.GetMouseButtonDown(1))
@@ -29,6 +28,10 @@ public class Deplacement : MonoBehaviour
                     {
                         _positionClic = hit.point;
                         _move = true;
+                    }else if (objToucher.CompareTag("fer"))
+                    {
+                        _positionClic = objToucher.transform.position;
+                        _move = true;
                     }
                 }
             }
@@ -40,9 +43,11 @@ public class Deplacement : MonoBehaviour
 
         if (_move)
         {
+            float tolerance = 0.5f;
             MoveToPosition(_positionClic);
-            if (transform.position == _positionClic)
+            if (Vector3.Distance(transform.position, _positionClic) < tolerance)
             {
+                Debug.Log("je m'arrete");
                 _move = false;
             }
         }
@@ -51,6 +56,12 @@ public class Deplacement : MonoBehaviour
     public void SelectedTrue()
     {
         _selected = true;
+    }
+    
+    public void SelectedFalse()
+    {
+        _selected = false;
+        _move = false;
     }
     
     private void MoveToPosition(Vector3 targetPosition)
