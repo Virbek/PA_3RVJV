@@ -4,20 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - sol
-  - fer
-  - robot
-  - human
-  - Usine
+  - Unit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - clickable
+  - PileDeFer
   - 
   - 
   - 

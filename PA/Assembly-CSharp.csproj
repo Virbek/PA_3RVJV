@@ -45,12 +45,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.21f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Unit\DeplacementUnit.cs" />
-    <Compile Include="Assets\Unit\UnitSelectManager.cs" />
-    <Compile Include="Assets\Unit\UnitSelectionBox.cs" />
-    <Compile Include="Assets\Unit\Unit.cs" />
+    <Compile Include="Assets\Units\Unit.cs" />
+    <Compile Include="Assets\Units\UnitSelectionBox.cs" />
+    <Compile Include="Assets\CollectFer.cs" />
+    <Compile Include="Assets\Batiment\PlacerBatiment.cs" />
     <Compile Include="Assets\Camera\CameraRotation.cs" />
     <Compile Include="Assets\Camera\CameraControler.cs" />
+    <Compile Include="Assets\Units\DeplacementUnit.cs" />
+    <Compile Include="Assets\RessourcesManager.cs" />
+    <Compile Include="Assets\Batiment\BatimentManager.cs" />
+    <Compile Include="Assets\Camera\CameraZoom.cs" />
+    <Compile Include="Assets\Units\UnitSelectManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

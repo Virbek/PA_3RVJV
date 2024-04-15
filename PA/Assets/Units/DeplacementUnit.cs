@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unit
+namespace Units
 {
     public class DeplacementUnit : MonoBehaviour
     {
@@ -10,7 +10,7 @@ namespace Unit
         public LayerMask ground;
         private void Start()
         {
-            _mainCamera = Camera.main;
+            _mainCamera = UnityEngine.Camera.main;
             _agent = GetComponent<NavMeshAgent>();
         }
     

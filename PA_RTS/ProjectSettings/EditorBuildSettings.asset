@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Deplacement_personage.unity
-    guid: dda8f79a8e4b25149acbe41438a85414
+  m_Scenes: []
   m_configObjects: {}
