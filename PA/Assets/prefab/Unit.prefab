@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 709236085620899890}
   - component: {fileID: 6695675062151999032}
   - component: {fileID: -6821699987839583878}
-  - component: {fileID: 2440780779064218611}
   m_Layer: 6
   m_Name: Unit
   m_TagString: Unit
@@ -161,33 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec89f66997f01440b9b9fa87cfb3930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &2440780779064218611
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4729131390188136150}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8339112689472719307
 GameObject:
   m_ObjectHideFlags: 0
