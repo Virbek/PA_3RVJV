@@ -3,18 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Unit
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - clickable
-  - PileDeFer
-  - caserne
+  - 
+  - 
+  - 
   - 
   - 
   - 

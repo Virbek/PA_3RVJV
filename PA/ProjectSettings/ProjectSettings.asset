@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 9aa21423a64fe6643a284dc50aefd306
+  productGUID: f476be511fa844543861f7f776d83c7d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: PA
+  productName: menu
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -676,14 +676,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: PA
+  metroPackageName: menu
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: PA
+  metroApplicationDescription: menu
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -752,11 +752,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 08397ac7-6284-4d47-8a11-6ea92f889ac4
+  cloudProjectId: 913698a3-fec3-4cab-86e2-02053f8fa4ec
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PA 2024-04-10_15-26-52
-  organizationId: torigoth
+  projectName: menu
+  organizationId: dreamsgtpro
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
